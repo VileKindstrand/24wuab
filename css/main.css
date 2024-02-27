@@ -1,0 +1,256 @@
+body,ul{
+    margin: 0;
+}
+
+.menu{
+    height: 100vh;
+    width: 80vw;
+    background: bisque;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+.menu-button i.material-icons{
+    font-size: 2.5rem;
+}
+
+.show{
+    left: 0vw;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: max-content;
+  }
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1 ;
+  }
+  
+  .carousel .prev {
+    left: 20px;
+  }
+  .carousel .next {
+    right: 20px;
+  }
+
+/*
+TELEFONSKÄRM            ----------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 600px) {
+
+    .wrapper{
+        display: grid;
+        grid-template-rows: 5vh 45vh 35vh 30vh 30vh 30vh 20vh;
+        grid-template-columns: 100%;
+        height: 100%;
+        width: 100%;
+        grid-template-areas:
+        'nav'
+        'hd'
+        'mn'
+        'pf1'
+        'pf2'
+        'pf3'
+        'ft'
+
+    }
+
+    main {
+
+        grid-area: mn;
+        text-align: center;
+        margin: 0px;
+        object-position: center;
+
+    }
+
+
+    header {
+
+        grid-area: hd;
+        text-align: center;
+        margin: 0px;
+        object-position: center;
+        background-image: url(../img/boys_think_of_rome.avif);
+        background-size: cover;
+
+    }
+
+    nav {
+
+        grid-area: nav;
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    aside{
+        grid-area: as;
+        background-color: bisque;
+        display: none;
+
+    }
+
+    #profile1 {
+
+        grid-area: pf1;
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    #profile2 {
+
+        grid-area: pf2;
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    #profile3 {
+
+        grid-area: pf3;
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    body{
+
+        background-color: blanchedalmond;
+        font-size: small;
+        color: burlywood;
+        height: auto;
+
+    }
+    
+}
+
+
+@media screen and (min-width: 601px) {
+
+    body{
+
+        background-color: navajowhite;
+        font-size: large;
+        color: saddlebrown;
+        height: auto;
+
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 20% 80%;
+        height: 100%;
+        width: 100%;
+        grid-template-areas:
+        'hd hd'
+        'as mn'
+
+    }
+
+    main {
+
+        grid-area: mn;
+        text-align: left;
+        margin: 0px;
+        object-position: top;
+                padding: 0px 20px;
+
+    }
+
+    nav {
+
+        grid-area: nav;
+        text-align: center;
+        margin: 0px;
+        object-position: center;
+        background-color: burlywood;
+
+    }
+    
+
+    header {
+
+        grid-area: hd;
+        text-align: center;
+        margin: 0px;
+        object-position: center;
+        background-color: burlywood;
+
+    }
+
+    aside{
+        grid-area: as;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    
+
+        .menu-button{
+            cursor: pointer;
+            display: none;
+        }
+        
+
+
+    }
+
