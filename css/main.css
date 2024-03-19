@@ -4,7 +4,7 @@ body {
 }
 
 .menu{
-    height: 100vh;
+    height: 100%;
     width: 40vw;
     background: bisque;
     position: fixed;
@@ -12,7 +12,7 @@ body {
     left: -90vw;
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
+    z-index: 30;
 }
 
 a {
@@ -47,24 +47,22 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    height: 100%;
     /* display: grid;
     align-items: center;
     justify-content: center; */
     /* object-position: center; */
     display: grid;
     /* align-items: center; */
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+
 
   }
 
 .carousel img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    align-self: center;
-    justify-self: center;
-
-
+    height: 45vh;
+    width: 100vw;
 
 }
 
@@ -90,14 +88,15 @@ a {
 
   .building_top{
     align-self: end;
-    width: 100%;
+    width: 100vw;
+    height: 25vh;
 
   }
 
   #pillar1{
     /* justify-self: left; */
     height: 100%;
-    width: 30%;
+    width: 30vh;
     position: absolute;
     z-index: 10;
     right: -5vh;
@@ -107,21 +106,22 @@ a {
     
     /* justify-self: right; */
     height: 100%;
-    width: 30%;
+    width: 30vh;
     position: absolute;
     z-index: 10;
     left: -5vh;
   }
 
-/*
-TELEFONSKÄRM            ----------------------------------------------------------------------------
-*/
+  .header2{
 
-@media screen and (max-width: 600px) {
+    background-image: url(../img/boys_think_of_rome.avif);
+}
 
-    .wrapper{
+    /* __________________________________________________________________________________ */
+    /* DATOR_______________________________________________________________________ */
+    .wrapper {
         display: grid;
-        grid-template-rows: 5vh 85vh 65vh 30vh 30vh 30vh 20vh;
+        grid-template-rows: 5vh 100vh 45vh 30vh 30vh 30vh 20vh;
         grid-template-columns: 100%;
         height: 100%;
         width: 100%;
@@ -142,6 +142,7 @@ TELEFONSKÄRM            -------------------------------------------------------
         margin: 0px;
         display: grid;
         position: relative;
+        overflow-x: hidden;
 
     }
 
@@ -156,10 +157,155 @@ TELEFONSKÄRM            -------------------------------------------------------
         background-size: cover;
         display: grid;
         justify-content: center;
-        object-fit: contain;
+        object-fit: contain;  
+    }
 
+    nav {
+
+        grid-area: nav;
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+        align-items: center;
+
+
+    }
+
+    aside{
+        grid-area: as;
+        background-color: bisque;
+        display: none;
+
+    }
+
+    .profile_img{
+
+        width: 10vh;
+        height: 10vh;
+    }
+
+    #profile1 {
+
+        grid-area: pf1;
+
+        margin: 0px;
+        object-position: center;
+        display: grid;
+        align-items: center;
+        /* flex-direction: row;
+        justify-content: space-between; */
+        padding: 0px 5px;
+
+    }
+
+    #profile2 {
+
+        grid-area: pf2;
+
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    #profile3 {
+
+        grid-area: pf3;
+
+        margin: 0px;
+        object-position: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 5px;
+
+    }
+
+    body{
+
+        background-color: blanchedalmond;
+        font-size: small;
+        color: burlywood;
+        height: auto;
+        overflow-x: hidden;
+
+    }
+    .menu-button{
+        cursor: pointer;
+        display: none;
+    }
+
+    #pillar1{
+        /* justify-self: left; */
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        z-index: 10;
+        right: -5vh;
+      }
+    
+      #pillar2{
         
+        /* justify-self: right; */
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        z-index: 10;
+        left: -5vh;
+      }
 
+
+/*
+TELEFONSKÄRM            ----------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 600px) {
+
+    .wrapper{
+        display: grid;
+        grid-template-rows: 5vh 85vh 45vh 30vh 30vh 30vh 20vh;
+        grid-template-columns: 100%;
+        height: 100%;
+        width: 100%;
+        grid-template-areas:
+        'nav'
+        'hd'
+        'mn'
+        'pf1'
+        'pf2'
+        'pf3'
+        'ft'
+
+    }
+
+    main {
+
+        grid-area: mn;
+        margin: 0px;
+        display: grid;
+        position: relative;
+        overflow-x: hidden;
+
+    }
+
+
+    header {
+
+        grid-area: hd;
+        text-align: center;
+        margin: 0px;
+        object-position: center;
+        background-image: url(../img/saint_pierre.jpg);
+        background-size: cover;
+        display: grid;
+        justify-content: center;
+        object-fit: contain;  
     }
 
     nav {
@@ -237,81 +383,18 @@ TELEFONSKÄRM            -------------------------------------------------------
         height: auto;
 
     }
+
+    .menu-button{
+        cursor: pointer;
+        display: block;
+    }
+
+    .building_top{
+        align-self: end;
+        width: 100%;
+        height: auto;
+    }
     
 }
-
-
-@media screen and (min-width: 601px) {
-
-    body{
-
-        background-color: navajowhite;
-        font-size: large;
-        color: saddlebrown;
-        height: auto;
-
-    }
-
-    .wrapper{
-        display: grid;
-        grid-template-rows: 10% 90%;
-        grid-template-columns: 20% 80%;
-        height: 100%;
-        width: 100%;
-        grid-template-areas:
-        'hd hd'
-        'as mn'
-
-    }
-
-    main {
-
-        grid-area: mn;
-        text-align: left;
-        margin: 0px;
-        object-position: top;
-                padding: 0px 20px;
-
-    }
-
-    nav {
-
-        grid-area: nav;
-        text-align: center;
-        margin: 0px;
-        object-position: center;
-        background-color: burlywood;
-
-    }
     
-
-    header {
-
-        grid-area: hd;
-        text-align: center;
-        margin: 0px;
-        object-position: center;
-        background-color: burlywood;
-
-    }
-
-    aside{
-        grid-area: as;
-        background-color: antiquewhite;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-    }
-
-    
-
-        .menu-button{
-            cursor: pointer;
-            display: none;
-        }
-        
-
-
-    }
 
