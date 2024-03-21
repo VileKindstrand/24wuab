@@ -4,17 +4,17 @@ body {
 }
 
 .menu{
-    height: 100%;
-    width: 40vw;
+    height: 90vh;
+    width: 100vw;
     background: bisque;
     position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
+    top: -100vh;
+    transition: top 0.5s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 30;
+    z-index: 29;
+    box-shadow: none;
+    font-size: large;
 }
-
 a {
     text-decoration: none;
     color: black;
@@ -25,7 +25,7 @@ a {
 }
 
 .show{
-    left: 0vw;
+    top: 0vw;
 }
 
 .fade-layer{
@@ -34,10 +34,16 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: bisque;
     display: none;
-    z-index: 5;
+    z-index: 28;
+    animation: fadeIn 0.5s;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 .fade-layer.visible{
     display: block;
@@ -86,6 +92,11 @@ a {
     right: 20px;
   }
 
+  .nekst{
+
+    left: 0vh;
+
+  }
   .building_top{
     align-self: end;
     width: 100vw;
@@ -165,11 +176,14 @@ a {
         grid-area: nav;
         margin: 0px;
         object-position: center;
+        /* position: fixed; */
+        background-color: navajowhite;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0px 5px;
         align-items: center;
+        z-index: 30;
 
 
     }
@@ -310,14 +324,14 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     nav {
 
-        grid-area: nav;
+        /* grid-area: nav;
         margin: 0px;
         object-position: center;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0px 5px;
-        align-items: center;
+        align-items: center; */
 
 
     }

@@ -30,6 +30,8 @@ function updateCarousel() {
     console.log("in")
     images.forEach((image, index) => {
     if (index === currentIndex) {
+        // let image = document.querySelector(".carousel img");
+        // image.classList.toggle("nekst");
         image.style.display = 'block';
     } else {
         image.style.display = 'none';
