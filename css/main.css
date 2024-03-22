@@ -3,13 +3,19 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+
+    color: black;
+
+}
+
 .menu{
-    height: 90vh;
-    width: 100vw;
+    height: 100vh;
+    width: 30vw;
     background: bisque;
     position: fixed;
-    top: -100vh;
-    transition: top 0.5s;
+    left: -100vw;
+    transition: left 0.5s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 29;
     box-shadow: none;
@@ -25,7 +31,7 @@ a {
 }
 
 .show{
-    top: 0vw;
+    left: 0vh;
 }
 
 .fade-layer{
@@ -34,7 +40,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: bisque;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 28;
     animation: fadeIn 0.5s;
@@ -69,6 +75,7 @@ a {
 .carousel img {
     height: 45vh;
     width: 100vw;
+    position: relative;
 
 }
 
@@ -94,7 +101,7 @@ a {
 
   .nekst{
 
-    left: 0vh;
+    left: 200vh;
 
   }
   .building_top{
@@ -129,21 +136,19 @@ a {
 }
 
     /* __________________________________________________________________________________ */
-    /* DATOR_______________________________________________________________________ */
+    /* DATOR_____________________________________________________________________________ */
     .wrapper {
         display: grid;
-        grid-template-rows: 5vh 100vh 45vh 30vh 30vh 30vh 20vh;
-        grid-template-columns: 100%;
+        grid-template-rows: 5vh 100vh 45vh 45vh 30vh 20vh;
+        grid-template-columns: 50% 50%;
         height: 100%;
         width: 100%;
         grid-template-areas:
-        'nav'
-        'hd'
-        'mn'
-        'pf1'
-        'pf2'
-        'pf3'
-        'ft'
+        'nav nav '
+        'hd hd'
+        'mn mn'
+        'pf1 pf2'
+        'ft ft'
 
     }
 
@@ -154,9 +159,9 @@ a {
         display: grid;
         position: relative;
         overflow-x: hidden;
+        transition: top 0.5s;
 
     }
-
 
     header {
 
@@ -177,7 +182,7 @@ a {
         margin: 0px;
         object-position: center;
         /* position: fixed; */
-        background-color: navajowhite;
+        background-color: bisque;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -197,20 +202,22 @@ a {
 
     .profile_img{
 
-        width: 10vh;
-        height: 10vh;
+        width: 35vw;
+        height: 35vh;
+        border-radius: 20px;
     }
 
-    #profile1 {
+    .profile1 {
 
         grid-area: pf1;
 
         margin: 0px;
         object-position: center;
-        display: grid;
+        display: flex;
         align-items: center;
-        /* flex-direction: row;
-        justify-content: space-between; */
+        flex-direction: column;
+        margin-top: 0px;
+        justify-content: center;
         padding: 0px 5px;
 
     }
@@ -222,8 +229,10 @@ a {
         margin: 0px;
         object-position: center;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        align-items: left;
+        flex-direction: column;
+        margin-top: 0px;
+        justify-content: center;
         padding: 0px 5px;
 
     }
@@ -252,7 +261,7 @@ a {
     }
     .menu-button{
         cursor: pointer;
-        display: none;
+        /* display: none; */
     }
 
     #pillar1{
@@ -283,9 +292,9 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     .wrapper{
         display: grid;
-        grid-template-rows: 5vh 85vh 45vh 30vh 30vh 30vh 20vh;
+        grid-template-rows: 5vh 85vh 45vh 30vh 20vh 20vh;
         grid-template-columns: 100%;
-        height: 100%;
+        height: 200vh;
         width: 100%;
         grid-template-areas:
         'nav'
@@ -293,10 +302,40 @@ TELEFONSKÄRM            -------------------------------------------------------
         'mn'
         'pf1'
         'pf2'
-        'pf3'
         'ft'
 
     }
+
+    .menu{
+
+        top: -100vh;
+        width: 100vw;
+        height: 100vh;
+        left: 0vh;
+        transition: top 0.5s;
+
+    }
+
+
+    .show{
+        top: 0vh;
+    }
+
+    
+    .fade-layer{
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: bisque;
+        display: none;
+        z-index: 28;
+        animation: fadeIn 0.4s;
+
+    }
+
 
     main {
 
@@ -307,6 +346,7 @@ TELEFONSKÄRM            -------------------------------------------------------
         overflow-x: hidden;
 
     }
+    
 
 
     header {
@@ -344,21 +384,15 @@ TELEFONSKÄRM            -------------------------------------------------------
     }
 
     .profile_img{
-
-        width: 10vh;
-        height: 10vh;
+        width: 85vw;
+        height: 25vh;
+        border-radius: 10px;
     }
 
-    #profile1 {
+    .profile1 {
 
         grid-area: pf1;
-
-        margin: 0px;
-        object-position: center;
-        display: grid;
-        align-items: center;
-        /* flex-direction: row;
-        justify-content: space-between; */
+        flex-direction: column;
         padding: 0px 5px;
 
     }
@@ -370,8 +404,7 @@ TELEFONSKÄRM            -------------------------------------------------------
         margin: 0px;
         object-position: center;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
         padding: 0px 5px;
 
     }
