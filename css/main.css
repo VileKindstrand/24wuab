@@ -276,12 +276,13 @@ a {
       width: fit-content;
       border-radius: 5px;
       transition: transform 0.3s;
-    }
-    .read_more_button:hover{
 
-      transform: scale(1.1)
+      :hover{
+        transform: scale(1.1)
 
+      }
     }
+
 
     .js-scroll {
       opacity: 0;
@@ -353,7 +354,6 @@ a {
         right: 0px;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 70%);
         height: 25%;
-        z-index: 1;
       }
 
     nav {
@@ -487,7 +487,7 @@ a {
     #pillar1{
         /* justify-self: left; */
         height: 100%;
-        width: 30%;
+        width: 20%;
         position: absolute;
         z-index: 10;
         right: -5vh;
@@ -497,7 +497,7 @@ a {
         
         /* justify-self: right; */
         height: 100%;
-        width: 30%;
+        width: 20%;
         position: absolute;
         z-index: 10;
         left: -5vh;
@@ -512,7 +512,7 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     .wrapper{
         display: grid;
-        grid-template-rows: 5vh 85vh 45vh 80vh 80vh 80vh 20vh;
+        grid-template-rows: 5vh 85vh 50vh 85vh 85vh 85vh 40vh;
         grid-template-columns: 100%;
         height: 200vh;
         width: 100%;
@@ -525,6 +525,15 @@ TELEFONSKÄRM            -------------------------------------------------------
         'bpf3'
         'ft'
 
+    }
+
+    .building_top{
+      height: auto;
+    }
+
+    .menu-button{
+        cursor: pointer;
+        display: block;
     }
 
     .menu{
@@ -559,7 +568,7 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     
 
-
+/* 
     main {
 
         grid-area: mn;
@@ -569,7 +578,7 @@ TELEFONSKÄRM            -------------------------------------------------------
         overflow-x: hidden;
 
     }
-    
+     */
 
 
     /* header {
@@ -618,6 +627,7 @@ TELEFONSKÄRM            -------------------------------------------------------
       flex-direction: column;
       align-items: center;
       justify-content: start;
+      margin: 5px;
 
 
     }
@@ -626,7 +636,7 @@ TELEFONSKÄRM            -------------------------------------------------------
       flex-direction: column;
       align-items: center;
       justify-content: start;
-      align-items: left;
+      margin: 5px;
 
 
 
@@ -636,8 +646,12 @@ TELEFONSKÄRM            -------------------------------------------------------
       flex-direction: column;
       align-items: center;
       justify-content: start;
+      margin: 5px;
 
+    }
 
+    .profile_text{
+      width: 70%;
     }
     .profile_pic {
 
@@ -651,6 +665,13 @@ TELEFONSKÄRM            -------------------------------------------------------
     .profile_img{
       width: 80%;
       height: 90%;
+    }
+
+    header:after {
+
+      align-self: baseline;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 40%);
+      height: 30%;
     }
 
     /* #profile2 {
@@ -686,16 +707,7 @@ TELEFONSKÄRM            -------------------------------------------------------
         height: auto;
 
     }  */
-    /* .building_top{
-      align-self: end;
-      width: 100vw;
-      height: auto;
-    } */
 
-    .menu-button{
-        cursor: pointer;
-        display: block;
-    }
 /*     
 } */
     
