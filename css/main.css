@@ -1,6 +1,12 @@
-body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body{
+
+  background-color: #10100e;
+  font-size: small;
+  height: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 h1 {
@@ -9,10 +15,21 @@ h1 {
 
 }
 
+.main_color{
+
+    color: #10100e;
+
+}
+
+.secondary_color{
+
+    color: #2c2c2c;
+}
+
 .menu{
     height: 100vh;
     width: 30vw;
-    background: bisque;
+    background: #2c2c2c;
     position: fixed;
     left: -100vw;
     transition: left 0.5s;
@@ -55,7 +72,111 @@ a {
     display: block;
 }
 
-.carousel {
+
+
+.carousel-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--lx-gap);
+    object-fit: contain;
+  
+    .carousel {
+      /* aspect-ratio: 16/9; */
+      width: 100%;
+      height: 300px;
+      position: relative;
+      object-fit: contain;
+  
+      .item {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+  
+        .caption {
+          width: 100%;
+          padding: var(--lx-space-01);
+          position: absolute;
+          bottom: 0;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 12px;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+  
+        &.active {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+  
+    .btn {
+      padding: 1em 2em;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+      color: #10100e;
+      background-color: #ffffe6;
+      transition: transform 0.2s ease-in-out;
+      z-index: 25;
+  
+      &:active,
+      &:focus {
+        transform: translateY(-50%) scale(0.9);
+      }
+  
+      &:hover {
+        transform: translateY(-50%) scale(1.1);
+      }
+    }
+  
+    .prev {
+      left: 5%;
+    }
+  
+    .next {
+      right: 5%;
+    }
+  
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+  
+      .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        background-color: #242421;
+        transition: background-color 0.2s ease;
+  
+        &.active,
+        &:hover {
+          background-color: #ffffe6;
+        }
+      }
+    }
+  }
+/* .carousel {
     position: relative;
     width: 100%;
     height: 100%;
@@ -63,23 +184,23 @@ a {
     align-items: center;
     justify-content: center; */
     /* object-position: center; */
-    display: grid;
+    /* display: grid; */
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     align-content: center;
-    justify-content: center;
+    justify-content: center; */
 
 
-  }
-
+/* } */
+/* 
 .carousel img {
     height: 45vh;
     width: 100vw;
-    position: relative;
+    position: relative; */
 
-}
+/* } */
 
-.carousel button {
+/* .carousel button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -90,9 +211,9 @@ a {
     cursor: pointer;
     z-index: 20 ;
 
-  }
+  } */
   
-  .carousel .prev {
+  /* .carousel .prev {
     left: 20px;
   }
   .carousel .next {
@@ -101,13 +222,16 @@ a {
 
   .nekst{
 
-    left: 200vh;
-
-  }
+    left: 200vh; */
+/* 
+  } */
   .building_top{
     align-self: end;
     width: 100vw;
     height: 25vh;
+    z-index: 5;
+
+
 
   }
 
@@ -132,14 +256,51 @@ a {
 
   .header2{
 
-    background-image: url(../img/boys_think_of_rome.avif);
+    background-image: url(../img/threee_statues.jpg);
 }
+
+    p, h3, a{
+        color: aliceblue;
+    }
+
+    nav.p{
+
+        color: #10100e;
+
+    }
+
+    .read_more_button{
+
+      background-color: #10100e;
+      padding: 10px;
+      width: fit-content;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+    .read_more_button:hover{
+
+      transform: scale(1.1)
+
+    }
+
+    .js-scroll {
+      opacity: 0;
+      transition: opacity 5000ms;
+      transition: ease-in 1s;
+      position: relative;
+      right: 50vw;
+    }
+    .scrolled {
+      left: 0px;
+      opacity: 1;
+
+    }
 
     /* __________________________________________________________________________________ */
     /* DATOR_____________________________________________________________________________ */
     .wrapper {
         display: grid;
-        grid-template-rows: 5vh 100vh 45vh 45vh 30vh 20vh;
+        grid-template-rows: 7vh 100vh 55vh 55vh 55vh 55vh 50vh;
         grid-template-columns: 50% 50%;
         height: 100%;
         width: 100%;
@@ -147,7 +308,9 @@ a {
         'nav nav '
         'hd hd'
         'mn mn'
-        'pf1 pf2'
+        'bpf bpf'
+        'bpf2 bpf2'
+        'bpf3 bpf3'
         'ft ft'
 
     }
@@ -158,10 +321,14 @@ a {
         margin: 0px;
         display: grid;
         position: relative;
-        overflow-x: hidden;
         transition: top 0.5s;
+        overflow: hidden;
+        object-fit: contain;
+        /* background-color: #161616; */
 
     }
+
+
 
     header {
 
@@ -169,12 +336,25 @@ a {
         text-align: center;
         margin: 0px;
         object-position: center;
-        background-image: url(../img/saint_pierre.jpg);
+        background-image: url(../img/hmm_rome.avif);
         background-size: cover;
         display: grid;
         justify-content: center;
         object-fit: contain;  
+        background-position: center;
     }
+
+    header:after {
+        content: "";
+        position: absolute;
+        object-position: bottom;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 70%);
+        height: 25%;
+        z-index: 1;
+      }
 
     nav {
 
@@ -182,83 +362,123 @@ a {
         margin: 0px;
         object-position: center;
         /* position: fixed; */
-        background-color: bisque;
+        background-color: #2c2c2c;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0px 5px;
         align-items: center;
-        z-index: 30;
+        z-index: 26;
 
+
+    }
+
+    footer{
+
+      background-color: #2c2c2c;
+      width: 100vw;
+      margin-top: 40px;
 
     }
 
     aside{
         grid-area: as;
-        background-color: bisque;
+        background-color: whitesmoke;
         display: none;
 
     }
 
     .profile_img{
 
-        width: 35vw;
-        height: 35vh;
+        width: 50%;
+        height: 70%;
         border-radius: 20px;
     }
 
-    .profile1 {
+    .profile_pic {
 
         grid-area: pf1;
 
-        margin: 0px;
+        margin: 30px 60px 30px 60px;
         object-position: center;
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 0px;
         justify-content: center;
-        padding: 0px 5px;
+        border-radius: 15px;
+        background-color: #10100e;
+
 
     }
 
-    #profile2 {
+    .profile_text {
 
-        grid-area: pf2;
+        grid-area: bpf;
 
         margin: 0px;
         object-position: center;
         display: flex;
-        align-items: left;
         flex-direction: column;
         margin-top: 0px;
         justify-content: center;
         padding: 0px 5px;
+        width: 60%;
 
     }
 
-    #profile3 {
+    #big_profile {
 
-        grid-area: pf3;
+        grid-area: bpf;
 
-        margin: 0px;
+        margin: 20px 45px;
         object-position: center;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0px 5px;
+        background-color: #161616;
+        border-radius: 15px;
 
     }
 
-    body{
+    #big_profile2 {
 
-        background-color: blanchedalmond;
-        font-size: small;
-        color: burlywood;
-        height: auto;
-        overflow-x: hidden;
+      grid-area: bpf2;
 
-    }
+      margin: 20px 45px;
+      object-position: center;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      text-align: right;
+      padding: 0px 5px;
+      background-color: #161616;
+      border-radius: 15px;
+
+  }
+
+  #reverse{
+
+    align-items: end;
+
+  }
+
+  
+  #big_profile3 {
+
+    grid-area: bpf3;
+
+    margin: 20px 45px;
+    object-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px;
+    background-color: #161616;
+    border-radius: 15px;
+
+  }
+
     .menu-button{
         cursor: pointer;
         /* display: none; */
@@ -292,7 +512,7 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     .wrapper{
         display: grid;
-        grid-template-rows: 5vh 85vh 45vh 30vh 20vh 20vh;
+        grid-template-rows: 5vh 85vh 45vh 80vh 80vh 80vh 20vh;
         grid-template-columns: 100%;
         height: 200vh;
         width: 100%;
@@ -300,8 +520,9 @@ TELEFONSKÄRM            -------------------------------------------------------
         'nav'
         'hd'
         'mn'
-        'pf1'
-        'pf2'
+        'bpf'
+        'bpf2'
+        'bpf3'
         'ft'
 
     }
@@ -329,12 +550,14 @@ TELEFONSKÄRM            -------------------------------------------------------
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: bisque;
+        background-color: #2c2c2c;
         display: none;
         z-index: 28;
         animation: fadeIn 0.4s;
 
     }
+
+    
 
 
     main {
@@ -349,23 +572,24 @@ TELEFONSKÄRM            -------------------------------------------------------
     
 
 
-    header {
+    /* header {
 
         grid-area: hd;
         text-align: center;
         margin: 0px;
         object-position: center;
-        background-image: url(../img/saint_pierre.jpg);
+        background-image: url(../img/threee_statues.jpg);
         background-size: cover;
         display: grid;
         justify-content: center;
         object-fit: contain;  
-    }
+    } */
 
     nav {
 
-        /* grid-area: nav;
-        margin: 0px;
+        grid-area: nav;
+        z-index: 30;
+        /* margin: 0px;
         object-position: center;
         display: flex;
         flex-direction: row;
@@ -383,21 +607,53 @@ TELEFONSKÄRM            -------------------------------------------------------
 
     }
 
-    .profile_img{
+    /* .profile_img{
         width: 85vw;
         height: 25vh;
         border-radius: 10px;
+    } */
+
+    #big_profile{
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+
+
+    }
+    #big_profile2{
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      align-items: left;
+
+
+
+    }
+    #big_profile3{
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+
+
+    }
+    .profile_pic {
+
+        margin: 5% 10% 5% 10%;
+        flex-direction: row;
+        object-position: left;
+        width: 80%;
+        height: 50%;
     }
 
-    .profile1 {
-
-        grid-area: pf1;
-        flex-direction: column;
-        padding: 0px 5px;
-
+    .profile_img{
+      width: 80%;
+      height: 90%;
     }
 
-    #profile2 {
+    /* #profile2 {
 
         grid-area: pf2;
 
@@ -407,9 +663,9 @@ TELEFONSKÄRM            -------------------------------------------------------
         flex-direction: column;
         padding: 0px 5px;
 
-    }
+    } */
 
-    #profile3 {
+    /* #profile3 {
 
         grid-area: pf3;
 
@@ -418,30 +674,29 @@ TELEFONSKÄRM            -------------------------------------------------------
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0px 5px;
+        padding: 0px 5px; */
 
     }
 
-    body{
+    /* body{
 
         background-color: blanchedalmond;
         font-size: small;
         color: burlywood;
         height: auto;
 
-    }
+    }  */
+    /* .building_top{
+      align-self: end;
+      width: 100vw;
+      height: auto;
+    } */
 
     .menu-button{
         cursor: pointer;
         display: block;
     }
-
-    .building_top{
-        align-self: end;
-        width: 100%;
-        height: auto;
-    }
-    
-}
+/*     
+} */
     
 
