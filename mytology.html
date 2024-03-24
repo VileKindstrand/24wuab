@@ -24,10 +24,10 @@
 
     
     <div class="menu">
-        <a href="index.html">Home page</a>
-        <a href="mytology.html">mytologi</a>
-        <a href="historia.html">historia</a>
-        <a href="filosofi.html">filosfi</a>
+        <a class="clickable" href="index.html">Home page</a>
+        <a class="clickable" href="mytology.html">mytologi</a>
+        <a class="clickable" href="historia.html">historia</a>
+        <a class="clickable" href="filosofi.html">filosfi</a>
     </div>
 
 
@@ -36,17 +36,17 @@
     <div class="wrapper">
 
         <nav>
-            <div class="menu-button">
+            <div class="menu-button clickable">
                 <i class="material-icons">menu</i>
             </div>
 
-            <div id="logo">
+            <div class="clickable" id="logo">
                 <a href="index.html"><h1>SLUTPROJEKT</h1></a>
             </div>
         </nav>
 
-        <header id="header_mythology">
-            <h1>Cool titel</h1>
+        <header id="mytologi_header">
+            <h1 id="header_title">Mytologi</h1>
             <img src="img/building_top_crop.png" alt="top of buildning" class="building_top">
 
         </header>
@@ -71,16 +71,16 @@
             <div class="carousel-container">
                 <div class="carousel">
                   <div class="item active">
-                    <a href="mytology.html"><img src="img/poseidon.jpg" alt="Image 1" /></a>
-                    <p class="caption">mytologi</p>
+                    <a href="#big_profile"><img src="img/odysséen.jpg" alt="Image 1" /></a>
+                    <p class="caption">Oddyséen</p>
                   </div>
                   <div class="item">
-                    <img src="https://bit.ly/3lkp5DW" alt="Image 2" />
-                    <p class="caption">Historia</p>
+                    <a href="#big_profile2"><img id="carousel_historia" src="img/trojansk_hast.jpg" alt="Image 2" /></a>
+                    <p class="caption">Iliaden</p>
                   </div>
                   <div class="item">
-                    <img src="https://bit.ly/3iMHuI1" alt="Image 3" />
-                    <p class="caption">Filosofier</p>
+                    <a href="#big_profile3"><img id="carousel_philosophy" src="img/medusa.jpg" alt="Image 3"/></a>
+                    <p class="caption">Medusa</p>
                   </div>
                 </div>
                 <button class="btn prev">Prev</button>
@@ -90,15 +90,17 @@
 
         </main>
 
+        <div class="ribbon">ribbon</div>
+
 
 
 
         <div id="big_profile" class="js-scroll">
             <div class="profile_pic">
-                <img class="profile_img" src="img/bumkin.jpg">
+                <img class="profile_img" src="img/odysséen.jpg">
             </div>
             <div class="profile_text">
-                <h3>mytologi</h3>
+                <h3>Oddyséen</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus expedita, eaque labore a quas dolor.</p>
                 <div class="read_more_button">
                     <a href="">read more</a>
@@ -108,23 +110,23 @@
         </div>
         <div id="big_profile2" class="js-scroll">
             <div class="profile_pic">
-                <img class="profile_img" src="img/bumkin.jpg">
+                <img class="profile_img" src="img/trojansk_hast.jpg">
             </div>
             <div class="profile_text" id="reverse">
                 <h3>Historia</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores explicabo, atque, officiis soluta voluptatibus nulla, a mollitia velit necessitatibus porro repellat! Ut in dolore earum officiis quibusdam iste nihil doloribus!.</p>
                 <div class="read_more_button">
-                    <a href="">read more</a>
+                    <a href="">Iliaden</a>
                 </div>    
             </div>
             
         </div>
         <div id="big_profile3" class="js-scroll">
             <div class="profile_pic">
-                <img class="profile_img" src="img/bumkin.jpg">
+                <img class="profile_img" src="img/medusa.jpg">
             </div>
             <div class="profile_text">
-                <h3>Filosofi</h3>
+                <h3>Meduca</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas sapiente illo et dolorum sequi atque aut asperiores minus eum, molestiae totam at exercitationem neque sit quod reiciendis aliquam. Sed? </p>   
                 <div class="read_more_button">
                     <a href="">read more</a>
