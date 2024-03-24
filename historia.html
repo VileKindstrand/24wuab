@@ -12,139 +12,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SLUTPROJEKT</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>AncientGreekGeek</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 
-    
-    <div class="menu">
-        <a class="clickable" href="index.html">Home page</a>
-        <a class="clickable" href="mytology.html">mytologi</a>
-        <a class="clickable" href="historia.html">historia</a>
-        <a class="clickable" href="filosofi.html">filosfi</a>
-    </div>
+
+<div class="menu">
+    <a class="clickable" href="index.html">Home page</a>
+    <a class="clickable" href="mytology.html">mytologi</a>
+    <a class="clickable" href="historia.html">historia</a>
+    <a class="clickable" href="filosofi.html">filosfi</a>
+</div>
 
 
-    <div class="fade-layer"></div>
+<div class="fade-layer"></div>
 
-    <div class="wrapper">
+<div class="wrapper">
 
-        <nav>
-            <div class="menu-button clickable">
-                <i class="material-icons">menu</i>
-            </div>
+    <nav>
+        <div class="menu-button clickable">
+            <i class="material-icons">menu</i>
+        </div>
 
-            <div class="clickable" id="logo">
-                <a href="index.html"><h1>SLUTPROJEKT</h1></a>
-            </div>
-        </nav>
+        <div class="clickable" id="logo">
+            <a href="index.html"><h1>AncientGreekGeek</h1></a>
+        </div>
+    </nav>
 
-        <header id="historia_header">
-            <h1 id="header_title">Historia</h1>
-            <img src="img/building_top_crop.png" alt="top of buildning" class="building_top">
+    <header id="historia_header">
+        <h1 id="header_title">Historia</h1>
+        <img src="img/building_top_crop.png" alt="top of buildning" class="building_top">
 
-        </header>
+    </header>
 
-        <!-- <main>      
+    <!-- <main>      
 
+        <div class="carousel">
+            <button class="prev">Prev</button>
+            <a href=""><img src="img/bumkin.jpg" alt="image 1"></a>
+            <a href=""><img src="img/borste.jpg" alt="image 3"></a>
+            <a href=""><img src="img/cute_little_guy.webp" alt="image 2"> </a>
+            
+            <button class="next">Next</button>
+        </div>
+    </main> -->
+
+    <main>
+
+        <img src="img/pillar.png" alt="first pillar" id="pillar1">
+        <img src="img/pillar.png" alt="secont pillar" id="pillar2">
+
+        <div class="carousel-container">
             <div class="carousel">
-                <button class="prev">Prev</button>
-                <a href=""><img src="img/bumkin.jpg" alt="image 1"></a>
-                <a href=""><img src="img/borste.jpg" alt="image 3"></a>
-                <a href=""><img src="img/cute_little_guy.webp" alt="image 2"> </a>
-               
-                <button class="next">Next</button>
-            </div>
-        </main> -->
-
-        <main>
-
-            <img src="img/pillar.png" alt="first pillar" id="pillar1">
-            <img src="img/pillar.png" alt="secont pillar" id="pillar2">
-
-            <div class="carousel-container">
-                <div class="carousel">
-                  <div class="item active">
-                    <a href="#big_profile"><img src="img/athen.jpg" alt="Image 1" /></a>
-                    <p class="caption">Athen</p>
-                  </div>
-                  <div class="item">
-                    <a href="#big_profile2"><img id="carousel_historia" src="img/spartan.jpg" alt="Image 2" /></a>
-                    <p class="caption">Spartanerna</p>
-                  </div>
-                  <div class="item">
-                    <a href="#big_profile3"><img id="carousel_philosophy" src="img/brottning.jpg" alt="Image 3"/></a>
-                    <p class="caption">Olympiska spelen</p>
-                  </div>
+                <div class="item active">
+                <a href="#big_profile"><img src="img/athen.jpg" alt="Image 1" /></a>
+                <p class="caption">Athen</p>
                 </div>
-                <button class="btn prev">Prev</button>
-                <button class="btn next">Next</button>
-                <div class="dots"></div>
+                <div class="item">
+                <a href="#big_profile2"><img id="carousel_historia" src="img/spartan.jpg" alt="Image 2" /></a>
+                <p class="caption">Spartanerna</p>
+                </div>
+                <div class="item">
+                <a href="#big_profile3"><img id="carousel_philosophy" src="img/brottning.jpg" alt="Image 3"/></a>
+                <p class="caption">Olympiska spelen</p>
+                </div>
             </div>
-
-        </main>
-
-        <div class="ribbon"></div>
-
-
-
-
-        <div id="big_profile" class="js-scroll">
-            <div class="profile_pic">
-                <img class="profile_img" src="img/athen.jpg">
-            </div>
-            <div class="profile_text">
-                <h3>Athen</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus expedita, eaque labore a quas dolor.</p>
-                <div class="read_more_button">
-                    <a href="">read more</a>
-                </div>    
-            </div>
-            
-        </div>
-        <div id="big_profile2" class="js-scroll">
-            <div class="profile_pic">
-                <img class="profile_img" src="img/spartan.jpg">
-            </div>
-            <div class="profile_text" id="reverse">
-                <h3>Spartanerna</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores explicabo, atque, officiis soluta voluptatibus nulla, a mollitia velit necessitatibus porro repellat! Ut in dolore earum officiis quibusdam iste nihil doloribus!.</p>
-                <div class="read_more_button">
-                    <a href="">read more</a>
-                </div>    
-            </div>
-            
-        </div>
-        <div id="big_profile3" class="js-scroll">
-            <div class="profile_pic">
-                <img class="profile_img" src="img/brottning.jpg">
-            </div>
-            <div class="profile_text">
-                <h3>De olympiska spelen</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas sapiente illo et dolorum sequi atque aut asperiores minus eum, molestiae totam at exercitationem neque sit quod reiciendis aliquam. Sed? </p>   
-                <div class="read_more_button">
-                    <a href="">read more</a>
-                </div>         
-            </div>
-            
+            <button class="btn prev">Prev</button>
+            <button class="btn next">Next</button>
+            <div class="dots"></div>
         </div>
 
-        <aside>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-            <li><a href="#">Item 5</a></li>
-        </aside>
+    </main>
 
-        <footer>footer</footer>
+    <div class="ribbon"></div>
+
+
+
+
+    <div id="big_profile" class="js-scroll">
+        <div class="profile_pic">
+            <img class="profile_img" src="img/athen.jpg">
+        </div>
+        <div class="profile_text">
+            <h3>Athen</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus expedita, eaque labore a quas dolor.</p>
+            <div class="read_more_button">
+                <a href="">read more</a>
+            </div>    
+        </div>
+        
     </div>
-    <script src= "js/main.js"></script>
+    <div id="big_profile2" class="js-scroll">
+        <div class="profile_pic">
+            <img class="profile_img" src="img/spartan.jpg">
+        </div>
+        <div class="profile_text" id="reverse">
+            <h3>Spartanerna</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores explicabo, atque, officiis soluta voluptatibus nulla, a mollitia velit necessitatibus porro repellat! Ut in dolore earum officiis quibusdam iste nihil doloribus!.</p>
+            <div class="read_more_button">
+                <a href="">read more</a>
+            </div>    
+        </div>
+        
+    </div>
+    <div id="big_profile3" class="js-scroll">
+        <div class="profile_pic">
+            <img class="profile_img" src="img/brottning.jpg">
+        </div>
+        <div class="profile_text">
+            <h3>De olympiska spelen</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas sapiente illo et dolorum sequi atque aut asperiores minus eum, molestiae totam at exercitationem neque sit quod reiciendis aliquam. Sed? </p>   
+            <div class="read_more_button">
+                <a href="">read more</a>
+            </div>         
+        </div>
+        
+    </div>
+
+    <aside>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+        <li><a href="#">Item 5</a></li>
+    </aside>
+
+    <footer></footer>
+</div>
+<script src= "js/main.js"></script>
 </body>
 </html> 
